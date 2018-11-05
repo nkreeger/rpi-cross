@@ -2,6 +2,7 @@
 meson build/ \
   --cross-file=$HOME/rpi-cross/cross \
   --prefix=/usr \
+  --libdir=lib/arm-linux-gnueabihf \
   -Dtexture-float=true \
   -Ddri-drivers= \
   -Dgallium-drivers=vc4,swrast \
