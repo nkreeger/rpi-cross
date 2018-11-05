@@ -1,0 +1,15 @@
+# Be sure to download and $PATH the RPI build toolchain
+# https://www.raspberrypi.org/documentation/linux/kernel/building.md
+
+[binaries]
+c = 'arm-linux-gnueabihf-gcc'
+cpp = 'arm-linux-gnueabihf-g++'
+ar = 'arm-linux-gnueabihf-ar'
+strip = 'arm-linux-gnueabihf-strip'
+pkgconfig = 'arm-linux-gnueabihf-pkg-config'
+
+[host_machine]
+system = 'linux'
+cpu_family = 'arm'
+cpu = 'armv7hl'
+endian = 'little'
