@@ -52,6 +52,14 @@ I've had trouble copying directly from a re-mounted SD card - so I prefer to `rs
 sudo rsync -xa --progress --rsync-path="sudo rsync" --exclude '/var/swap' --stats pi@192.168.1.59:/ $ROOT_NFS
 ```
 
+3. Cleanup etc/fstab 
+```sh
+grep proc $ROOT_NFS/etc/fstab > $ROOT_NFS/etc/fstab.new
+mv $ROOT_NFS/etc/fstab.new $ROOT_NFS/etc/fstab
+```
+
+4. Ensure /var/swap is not included
+
 3. Create a backup of the filesystem on the server
 ```sh
 sudo tar -czvf rootnfs-backup.tar.gz $ROOT_NFS
