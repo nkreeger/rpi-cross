@@ -2,8 +2,30 @@
 
 Before running this tutorial - please ensure:
 
-<!-- - Create a folder for ROOT NFS (I use `~/rpi/rootnfs`) -->
+- Ensure Docker is installed - follow instructions for the OS you are running.
+- Create a folder to store Docker images and workspace (I use `~/docker/rpi`)
 
-<!-- ## Global references
+## Global references
 
-- `$ROOTNFS_HOME`: Directory where ROOT NFS for RPi is located -->
+- `$DOCKER_HOME`: Directory where Docker images are stored
+
+### Setting up Docker Environment
+
+1. Create workspace folders
+```sh
+cd $DOCKER_HOME
+mkdir project workspace
+``` 
+
+2. Create docker-compose.yml
+```
+
+```
+
+***NOTE: I keep updated Docker/docker-compose.yml files [here](https://gist.github.com/nkreeger)***
+
+### Clone and build linux kernel
+
+### Clone and build libdrm
+
+### Clone and build mesa
