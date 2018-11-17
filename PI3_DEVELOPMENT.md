@@ -29,3 +29,24 @@ mkdir project workspace
 ### Clone and build libdrm
 
 ### Clone and build mesa
+
+### Clone and build xserver
+
+```sh
+git clone git://anongit.freedesktop.org/git/xorg/proto/xorgproto
+cd xorgproto && ./autogen.sh --prefix=/usr && make && make install
+```
+
+```sh
+git clone git://git.freedesktop.org/git/xorg/lib/libXfont
+cd libXfont && ./autogen.sh --prefix=/usr --libdir=/usr/lib/arm-linux-gnueabihf && make && make install
+```
+
+```sh
+git clone git://git.freedesktop.org/git/xorg/xserver
+
+pi2meson \
+  -Dlog_dir=/var/log \
+  "$@"
+```
+
